@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slides</title>
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/black.min.css">
+  <link rel="stylesheet" href="lib/css/zenburn.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Title</h1>
+        <h3>Title</h3>
+
+        <p>Subtitle</p>
+
+        <small><a href="#">Link to slides</a></small>
+      </section>
+
+      <section>
+        <section><h1>Title</h1></section>
+
+        <section>
+          <ol>
+            <li>List</li>
+            <li>List</li>
+            <li class="fragment">List</li>
+            <li class="fragment">List</li>
+          </ol>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h1>Title</h1>
+        </section>
+
+        <section>
+          <h4>Title</h4>
+
+          <pre><code class="hljs">
+class Foo {
+  bar() {
+    console.log("buzz")
+  }
+}
+
+const foo = new Foo()
+foo.bar() //=> buzz
+          </code></pre>
+
+          <aside class="notes">
+            Press <kbd>s</kbd> to open your notes
+          </aside>
+        </section>
+
+        <section>
+          <h2>Title</h2>
+
+          <ul>
+            <li>...</li>
+            <span class="fragment">
+              <li>List</li>
+              <li>List</li>
+              <li>List</li>
+            </span>
+            <span class="fragment">
+              <li>List</li>
+              <li>List</li>
+              <li>List</li>
+            </span>
+          </ul>
+
+          <aside class="notes">
+            - some <br>
+            - notes <br>
+            - here <br>
+          </aside>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      slideNumber: true,
+
+      dependencies: [
+        { src: 'plugin/markdown/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      ],
+    });
+  </script>
+</body>
+</html>
